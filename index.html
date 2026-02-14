@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Arshu ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(#ffdde1, #ee9ca7);
+    color: #5a0b2e;
+    text-align: center;
+}
+section {
+    display: none;
+    padding: 25px;
+    min-height: 100vh;
+}
+.active {
+    display: block;
+}
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+}
+button:hover {
+    background: #c9184a;
+}
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 15px pink;
+}
+img {
+    width: 80%;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+.reason {
+    font-size: 18px;
+    margin: 15px 0;
+}
+.quiz button {
+    display: block;
+    width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VALENTINE ASK -->
+<section class="active" id="valentine">
+    <div class="card">
+        <h1>Arshu ❤️</h1>
+        <p>Will you be my Valentine? 💌</p>
+        <button onclick="next('letter')">YES 💖</button>
+        <button onclick="alert('No option allowed 😌 Only YES is valid!')">NO 😏</button>
+    </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section id="letter">
+    <div class="card">
+        <h2>My Love Letter to You 💕</h2>
+        <p>
+            My Arshu,<br><br>
+            Loving you is the most beautiful thing my heart has ever done.
+            You are my comfort, my smile, my safe place.
+            Even on my worst days, thinking about you makes everything softer.
+            <br><br>
+            You are not just my boyfriend, you are my home.
+            Thank you for loving me the way you do.
+            <br><br>
+            Forever yours,<br>
+            ❤️
+        </p>
+        <button onclick="next('reasons')">Why I Love You ➝</button>
+    </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasons">
+    <div class="card">
+        <h2>Reasons Why I Love You 💗</h2>
+        <div class="reason">🌸 You understand me without words</div>
+        <div class="reason">🌸 Your voice feels like peace</div>
+        <div class="reason">🌸 You care in the smallest ways</div>
+        <div class="reason">🌸 You make me laugh even when I cry</div>
+        <div class="reason">🌸 You are YOU… and that’s enough</div>
+        <button onclick="next('quiz')">Cute Quiz ➝</button>
+    </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+    <div class="card quiz">
+        <h2>How Well Do You Know Us? 😘</h2>
+
+        <p>Who loves more?</p>
+        <button onclick="correct()">Me 😌</button>
+        <button onclick="correct()">Both 💕</button>
+
+        <p>Who will say sorry first?</p>
+        <button onclick="correct()">You 😆</button>
+        <button onclick="correct()">Me 🤭</button>
+
+        <button onclick="next('photos')">Next ➝</button>
+    </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+    <div class="card">
+        <h2>Our Moments 📸</h2>
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <p>(Add your photos here 💖)</p>
+        <button onclick="next('music')">Music ➝</button>
+    </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+    <div class="card">
+        <h2>Our Song 🎶</h2>
+
+        <!-- Replace Spotify link with your song -->
+        <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a"
+        width="100%" height="152" frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+        <button onclick="next('final')">Final Surprise 💘</button>
+    </div>
+</section>
+
+<!-- FINAL -->
+<section id="final">
+    <div class="card">
+        <h1>❤️ I LOVE YOU ARSHU ❤️</h1>
+        <p>
+            Today, tomorrow, always…<br>
+            You are my forever Valentine 💞
+        </p>
+    </div>
+</section>
+
+<script>
+function next(id) {
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+function correct() {
+    alert("Correct answer 😘 Because love wins!");
+}
+</script>
+
+</body>
+</html>
